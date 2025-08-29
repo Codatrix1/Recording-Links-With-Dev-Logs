@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BetterBugs | Recording Link Configured with Custom UI</title>
 
+    <!-- https://docs.betterbugs.io/dashboard/workspace-settings/recording-links -->
+
     <!-- Scripts to cature logs, network requests, and other technical details from devtools + for Recorder UI-->
     <script src="https://cdn.betterbugs.io/scripts/latest/logs-capture.js"></script>
     <script src="https://cdn.betterbugs.io/scripts/latest/recorder.js"></script>
+
+    <!-- All Customization Options for Recording Links UI -->
+    <!-- for metaData, both key and values can be modified; 
+         for rest, you can modify the values as required -->
+    <script>
+      window.__BetterbugsRecordingLinkConfig = {
+        styles: {
+          theme: "light",
+          primaryColor: "#000000",
+          primaryTextColor: "#ffffff",
+        },
+        startRecordingBtnText: "Start recording",
+        mainHeaderText: "Ready to record?",
+        subHeaderText: "Record your screen",
+        emailFieldLabel: "Email",
+        titleFieldLabel: "Title",
+        descriptionFieldLabel: "Description",
+        emailFieldPlaceholder: "Enter your email",
+        titleFieldPlaceholder: "Enter your title",
+        descriptionFieldPlaceholder: "Enter your description",
+        successMessageHeaderText: "All set!",
+        successMessageSubHeaderText: "We've saved your input",
+        metaData: {
+          username: "obi-wan",
+          plan: "individual",
+          userID: 1234,
+        },
+      };
+    </script>
   </head>
   <body>
     <h1>Recording Links</h1>
